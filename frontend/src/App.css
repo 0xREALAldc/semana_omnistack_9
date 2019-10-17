@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root { 
+  min-height: 100%;/* para que seja possivel colocar a imagem de fundo no background todo*/
+}
+
+
+body{
+  background: #000 url('./assets/background.jpg') no-repeat; 
+  background-size: cover;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body, input, button { /* colocado o input e button aqui porque por padrao eles nao herdam a fonte do body*/ 
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.container{
+  margin: 80px auto 0; /* 80px do topo, com o auto para os lados ele ja ira centralizar*/
+  max-width: 450px;
+  width: 100%; /* hack: caso a tela seja menor que 450 ele ira usar 100% da tela, mas caso seja maior ira pegar no max 450px*/  
+  display: flex;
+  flex-direction: column; /*para a logo e o box de content fiquem um abaixo do outro*/
+  align-items: center; 
+}
+
+.content{
+  width: 100%;
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.content > p{ /* vai estilizar apenas o primeiro p */
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content form label {
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.content form label span {
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+
+.content form input {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 45px;
+  padding: 0 15px; /*pega apenas 15 nas laterais*/
+  font-size: 16px;
+}
+
+.content button.btn { 
+  border: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 42px;
+  padding: 0 20;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f05a5b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content button.btn:hover{
+  background: #e14f50;
+}
